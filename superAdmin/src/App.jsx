@@ -5,7 +5,7 @@ import ViewClient from './pages/ViewClient'
 const App = () => {
   return (
     <div>
-      <ViewClient/>
+      <ClientManagment/>
     </div>
   )
 }
