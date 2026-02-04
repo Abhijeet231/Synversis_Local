@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const OverViewCard = ({name, number, icon}) => {
   return (

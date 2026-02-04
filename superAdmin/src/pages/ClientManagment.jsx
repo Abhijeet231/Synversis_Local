@@ -27,7 +27,7 @@ const ClientManagment = () => {
       {/* Searchbar and filters*/}
       <section className="flex justify-between gap-4">
         {/* //first Div */}
-        <div className="relative sm:w-7xl w-full">
+        <div className="relative sm:w-5xl w-full ">
             <label htmlFor="searchBar">
                 <Search className=" absolute top-3 left-2 text-gray-500 w-6 h-6"/>
           <input
@@ -40,9 +40,9 @@ const ClientManagment = () => {
         </div>
 
         {/* // Second Div */}
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-between">
 
-          <button className="px-8 py-3 text-center text-gray-600 bg-gray-200 rounded-xl ">
+          <button className="px-8 py-2 text-center text-gray-600 bg-gray-200 rounded-xl ">
             <span className="flex items-center gap-2">
               <Funnel className="w-4 h-4" />
               <span>All Status</span>
@@ -50,7 +50,7 @@ const ClientManagment = () => {
             </span>
           </button>
 
-          <button className="px-8 py-3 text-center text-gray-600 bg-gray-200 rounded-xl ">
+          <button className="px-8 py-2 text-center text-gray-600 bg-gray-200 rounded-xl ">
             <span className="flex items-center gap-2">
               <Funnel className="w-4 h-4" />
               <span>All Memberships</span>
@@ -64,7 +64,7 @@ const ClientManagment = () => {
     {/* All Companies in Gird Layout */}
     <section className="mt-5">
         {/* // OVerview */}
-        <div className="grid grid-cols-4 gap-5 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
 
            <OverViewCard name="Total Customers" number="120" icon={<Users/>} />
 
@@ -76,14 +76,17 @@ const ClientManagment = () => {
         </div>
     </section>
 
-    <section className="grid grid-cols-4 gap-5">
+    <section className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
         
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
-        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months"/>
+        <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months" usage={78}/>
+        <ClientCard compamyName="GreenLeaf Organics" ContactInfo="contact@greenleaf.com" activeStatus="Active" subscriptionType="Premium" duration="6 months" usage={45}/>
+        <ClientCard compamyName="BlueWave Technologies" ContactInfo="contact@bluewave.com" activeStatus="Inactive" subscriptionType="Basic" duration="3 months" usage={20}/>
+        <ClientCard compamyName="Sunrise Ventures" ContactInfo="contact@sunrise.com" activeStatus="Pending" subscriptionType="Trial" duration="1 month" usage={10}/>
+          <ClientCard compamyName="Tech Solutions Inc." ContactInfo="contact@techsolutions.com" activeStatus="Active" subscriptionType="Enterprise" duration="12 months" usage={90}/>
+           <ClientCard compamyName="Synchronize Solutions Inc." ContactInfo="sync@techsl.com" activeStatus="Active" subscriptionType="Trial" duration="7 months" usage={37}/>
+           <ClientCard compamyName="TeslaAuto Solutions Inc." ContactInfo="tesla@techsl.com" activeStatus="Active" subscriptionType="Premium" duration="24 months" usage={69}/>
+           <ClientCard compamyName="TataParts Solutions Inc." ContactInfo="tataauto@techsl.com" activeStatus="pending" subscriptionType="Trial" duration="7 months" usage={55}/>
+        
     </section>
 
     </div>
