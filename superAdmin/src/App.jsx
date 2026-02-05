@@ -1,12 +1,15 @@
-import React from 'react'
-import ClientManagment from './pages/ClientManagment'
-import ViewClient from './pages/ViewClient'
+import {Outlet} from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+
+
+
 
 const App = () => {
   return (
-    <div>
-      <ClientManagment/>
-    </div>
+    <>
+         <Navbar/>
+         <Outlet/>
+    </>
   )
 }
 
