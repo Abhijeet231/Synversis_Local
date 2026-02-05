@@ -5,55 +5,55 @@ import ClientCard from "../components/clientManagment/ClientCard";
 const ClientManagment = () => {
   return (
     //Parent Div
-    <div className="parent m-5">
+    <div className=" p-2 ">
       {/* // Top Section */}
       <section className="flex justify-between align-middle mb-5">
         <div>
-          <h1 className="text-sky-900 font-semibold text-2xl">
+          <h1 className="text-sky-900 font-semibold text-xl">
             Client Managment
           </h1>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-sm">
             Manage Customer accounts and memberships
           </p>
         </div>
 
         <div>
-          <button className="bg-sky-900 text-white rounded-2xl px-4 py-2">
+          <button className="bg-sky-900 text-white rounded-xl px-4 py-1 text-sm flex items-center text-center gap-2">
             + Add Customers <span className="text-red-600"> *</span>
           </button>
         </div>
       </section>
 
       {/* Searchbar and filters*/}
-      <section className="flex justify-between gap-4">
+      <section className="flex flex-col sm:flex-row gap-4">
         {/* //first Div */}
-        <div className="relative sm:w-5xl w-full ">
+        <div className="relative w-full max-w-5xl ">
             <label htmlFor="searchBar">
-                <Search className=" absolute top-3 left-2 text-gray-500 w-6 h-6"/>
+                <Search className=" absolute top-2 left-2 text-gray-500 w-6 h-6"/>
           <input
             type="text"
             id="searchBar"
             placeholder="Search Customers"
-            className="px-8 py-3 rounded-xl w-full border bg-gray-200 "
+            className="px-8 py-2 rounded-xl w-full border bg-gray-50 "
           />
           </label>
         </div>
 
         {/* // Second Div */}
-        <div className="flex gap-2 justify-between">
+        <div className="flex gap-2 items-center">
 
-          <button className="px-8 py-2 text-center text-gray-600 bg-gray-200 rounded-xl ">
+          <button className="px-5 py-2 text-center text-gray-600 bg-gray-200 rounded-xl whitespace-nowrap ">
             <span className="flex items-center gap-2">
               <Funnel className="w-4 h-4" />
-              <span>All Status</span>
+              <span className="text-xs">All Status</span>
               <ChevronDown className="w-4 h-4" />
             </span>
           </button>
 
-          <button className="px-8 py-2 text-center text-gray-600 bg-gray-200 rounded-xl ">
+          <button className="px-5 py-2 text-center text-gray-600 bg-gray-200 rounded-xl whitespace-nowrap">
             <span className="flex items-center gap-2">
               <Funnel className="w-4 h-4" />
-              <span>All Memberships</span>
+              <span className="text-xs">All Memberships</span>
               <ChevronDown className="w-4 h-4" />
             </span>
           </button>

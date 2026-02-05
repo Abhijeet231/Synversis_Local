@@ -57,7 +57,7 @@ const ClientCard = ({compamyName, ContactInfo, activeStatus, subscriptionType, d
         <button className="flex-1 flex items-center justify-center gap-2 border rounded-lg py-2 text-sky-700 font-semibold">
           <Eye className="w-4 h-4"/>
           View
-          <span className="text-red-500 font-bold">*</span>
+          
 
         </button>
 

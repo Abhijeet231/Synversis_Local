@@ -18,9 +18,9 @@ import ViewClient from "../pages/ViewClient";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <App/>,
+        element: <Dashboard/>,
         children: [
-            {index: true, element: <Dashboard/>},
+            {index: true},
             {path:"/client-managment", element: <ClientManagment/>},
             {path:"/checklist-builder", element: <ChecklistBuilder/>},
             {path:"/assigned-checklist", element: <AssignedChecklist/>},

@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div>
         {/* //SearchBar */}
-        <div className="w-full h-14 border-b bg-white px-6">
+        <div className="w-full h-14 border-b bg-white px-6 ">
       <div className="h-full flex items-center justify-between gap-4">
         
         {/* LEFT: Search */}
