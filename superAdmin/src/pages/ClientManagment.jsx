@@ -1,10 +1,11 @@
 import { Funnel, ChevronDown, Search, Users, Building,ClockAlert, UserStar } from "lucide-react";
 import OverViewCard from "../components/clientManagment/OverViewCard";
 import ClientCard from "../components/clientManagment/ClientCard";
+import { Outlet } from "react-router-dom";
 
 const ClientManagment = () => {
-  return (
-    //Parent Div
+  return (<>
+    {/* //Parent Div */}
     <div className=" p-2 ">
       {/* // Top Section */}
       <section className="flex justify-between align-middle mb-5">
@@ -64,7 +65,7 @@ const ClientManagment = () => {
     {/* All Companies in Gird Layout */}
     <section className="mt-5">
         {/* // OVerview */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 p-5">
 
            <OverViewCard name="Total Customers" number="120" icon={<Users/>} />
 
@@ -90,6 +91,9 @@ const ClientManagment = () => {
     </section>
 
     </div>
+
+   
+    </>
   );
 };
 

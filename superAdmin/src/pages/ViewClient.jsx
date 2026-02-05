@@ -6,8 +6,15 @@ import {
   Globe,
   Edit,
   UserX,
+  Box,
+  ReceiptText,
+  FileText
 } from "lucide-react";
 import CompanydetailsCard from "../components/clientManagment/CompanydetailsCard";
+import AccountInfo from "../components/clientManagment/overview/AccountInfo";
+import Usage from "../components/clientManagment/overview/Usage";
+import SummaryCard from "../components/clientManagment/overview/SummaryCard";
+import { Link, Outlet } from "react-router-dom";
 
 const ViewClient = ({
   CompanyName = "Acme Corporation",
@@ -28,11 +35,11 @@ const ViewClient = ({
       <div className="flex items-start  gap-3 mt-5">
         {/* //CopanyLogo */}
         <div className="p-2 ">
-          <Building className="h-14 w-14 text-sky-700" />
+          <Building className="h-10 w-10 text-sky-700" />
         </div>
 
         <div>
-          <h2 className="text-sky-800 font-semibold text-2xl">{CompanyName}</h2>
+          <h2 className="text-sky-800 font-semibold text-lg">{CompanyName}</h2>
           <p className="text-gray-600 flex gap-1 items-center justify-center">
             <Mail className="h-4 w-4" />
             {email}
@@ -55,15 +62,25 @@ const ViewClient = ({
         </div>
 
         {/* // Edit Buttons and Disable */}
-        <div className="ml-auto mr-5">
-          <button className="border rounded-xl px-4 py-2  font-semibold mr-3 bg-sky-800 text-white ">
-            <Edit className="inline mr-4" />
-            Edit Customer
+        <div className="ml-auto mr-5 flex gap-2 flex-wrap">
+
+          <button className="border rounded-xl px-4 py-2  font-semibold mr-3 bg-sky-800 text-white text-sm whitespace-nowrap">
+            <span className="flex items-center gap-1">
+
+            <Edit className="inline mr-4 h-5 w-5" />
+            <span className="text-xs">Edit Customer</span>
+            </span>
+
           </button>
 
-          <button className="border rounded-xl px-4 py-2 font-semibold ml-4 border-gray-500">
-            <UserX className="inline mr-4" />
-            Disable
+            
+
+          <button className="border rounded-xl px-4 py-2 font-semibold ml-4 border-gray-500 text-sm whitespace-nowrap bg-gray-200">
+            <span className="flex items-center gap-1">
+
+            <UserX className="inline mr-4 h-5 w-5" />
+            <span className="text-xs ">Disable</span>
+            </span>
           </button>
         </div>
       </div>
@@ -78,22 +95,22 @@ const ViewClient = ({
 
       {/* // Menu Bar for Client Details */}
       <div className="border border-gray-300 bg-amber-50/20 p-1 flex justify-around mt-8 rounded-xl">
-        <button className="text-sky-700 font-semibold">Overview</button>
+        <Link
+        to={''}
+        className="text-sky-700 font-semibold hover:cursor-pointer transition-all">Overview</Link>
 
-        <button className="text-sky-700 font-semibold">Subscription</button>
+        <Link
+        to={'subscription'}
+        className="text-sky-700 font-semibold hover:cursor-pointer transition-all">Subscription</Link>
 
-        <button className="text-sky-700 font-semibold">Settings</button>
+        <Link
+        to={'settings'}
+        className="text-sky-700 font-semibold hover:cursor-pointer transition-all">Settings</Link>
       </div>
 
       {/* // Account Info and Usages Overview Section */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 ">
-        {/* // Account Info */}
-        <div className="bg-amber-50/20 ">
-          Account Info</div>
-
-        <div>Usages Overview</div>
-      </div>
+      <Outlet/>
     </div>
   );
 };
